@@ -1,0 +1,15 @@
+meta {
+  name: Trending Posts
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/pixelfed/v2/discover/posts/trending
+  body: none
+  auth: inherit
+}
+
+query {
+  ~range: yearly
+}

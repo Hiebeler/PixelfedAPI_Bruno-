@@ -1,0 +1,17 @@
+meta {
+  name: Hashtag Timeline
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/v1/timelines/tag/photos?_pe=1
+  body: none
+  auth: inherit
+}
+
+query {
+  _pe: 1
+  ~limit: 
+  ~max_id: 
+}
