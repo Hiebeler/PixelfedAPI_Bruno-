@@ -9,3 +9,7 @@ get {
   body: none
   auth: none
 }
+
+script:post-response {
+  bru.setEnvVar("wellKnownDomainHref",res.body.links[0].href)
+}

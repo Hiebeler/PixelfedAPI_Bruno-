@@ -5,7 +5,11 @@ meta {
 }
 
 put {
-  url: {{baseUrl}}/api/v1/media/{id}
-  body: none
+  url: {{baseUrl}}/api/v1/media/{{mediaId}}
+  body: formUrlEncoded
   auth: none
+}
+
+body:form-urlencoded {
+  description: updated media description
 }
