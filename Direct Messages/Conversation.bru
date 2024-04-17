@@ -1,0 +1,15 @@
+meta {
+  name: Conversation
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v1/conversations
+  body: none
+  auth: none
+}
+
+script:post-response {
+  bru.setEnvVar("conversationId",res.body[0].accounts[0].id)
+}

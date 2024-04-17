@@ -11,5 +11,5 @@ get {
 }
 
 script:post-response {
-  bru.setVar("myAccountId",res.body.id);
+  bru.setEnvVar("myAccountId",res.body.id);
 }

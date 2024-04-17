@@ -1,0 +1,15 @@
+meta {
+  name: Collections by Id
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v1.1/collections/accounts/{{accountId}}
+  body: none
+  auth: none
+}
+
+script:post-response {
+  bru.setEnvVar("collectionId", res.body[0].id)
+}
