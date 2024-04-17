@@ -5,7 +5,12 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}
+  url: {{baseUrl}}/api/v1.1/direct/thread?pid={{conversationId}}
   body: none
   auth: none
+}
+
+query {
+  pid: {{conversationId}}
+  ~max_id: 
 }

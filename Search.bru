@@ -1,0 +1,26 @@
+meta {
+  name: Search
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/v2/search?q=danapoiajsdföoijasdf&_pe=1
+  body: none
+  auth: none
+}
+
+query {
+  q: danapoiajsdföoijasdf
+  _pe: 1
+  ~type: accounts
+  ~limit: 5
+}
+
+script:post-response {
+  if (res.body.accounts.length != 0) {
+    bru.setEnvVar("accountId",res.body.accounts[0].id)
+  }
+    
+  
+}

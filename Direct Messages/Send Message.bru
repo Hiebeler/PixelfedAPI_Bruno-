@@ -6,6 +6,12 @@ meta {
 
 post {
   url: {{baseUrl}}/api/v1.1/direct/thread/send
-  body: none
+  body: formUrlEncoded
   auth: none
+}
+
+body:form-urlencoded {
+  to_id: {{conversationId}}
+  message: bruno test
+  type: text
 }
