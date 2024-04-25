@@ -4,6 +4,8 @@
 
 This Repository is a Bruno collection for interacting with the Pixelfed API.
 
+![Screenshot of Bruno](/images/screenshot.png)
+
 ## How to use
 
 1. Clone this repository
