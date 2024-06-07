@@ -5,13 +5,13 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/timelines/tag/photos?_pe=1
+  url: {{baseUrl}}/api/v1/timelines/tag/photos?limit=20
   body: none
   auth: inherit
 }
 
 query {
-  _pe: 1
-  ~limit: 
+  limit: 20
+  ~_pe: 1
   ~max_id: 
 }

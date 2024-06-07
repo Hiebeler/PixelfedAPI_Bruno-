@@ -14,7 +14,3 @@ query {
   ~limit: 
   ~max_id: 
 }
-
-script:post-response {
-  bru.setEnvVar("postId",res.body[0].id)
-}

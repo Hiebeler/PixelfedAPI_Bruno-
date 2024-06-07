@@ -5,11 +5,11 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/conversations
+  url: {{baseUrl}}/api/v1/conversations?limit=10
   body: none
-  auth: none
+  auth: inherit
 }
 
-script:post-response {
-  bru.setEnvVar("conversationId",res.body[0].accounts[0].id)
+query {
+  limit: 10
 }
