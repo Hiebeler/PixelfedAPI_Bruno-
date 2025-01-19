@@ -1,15 +1,11 @@
 meta {
-  name: Trending Posts
+  name: posts Network trending
   type: http
-  seq: 1
+  seq: 4
 }
 
 get {
   url: {{baseUrl}}/api/v1.1/discover/posts/network/trending
   body: none
   auth: inherit
-}
-
-params:query {
-  ~range: daily
 }

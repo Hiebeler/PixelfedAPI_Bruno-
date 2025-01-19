@@ -5,9 +5,14 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1.1/collections/accounts/{{accountId}}
+  url: {{baseUrl}}/api/v1.1/collections/accounts/{{accountId}}?page=1
   body: none
   auth: inherit
+}
+
+params:query {
+  page: 1
+  ~limit: 3
 }
 
 script:post-response {
